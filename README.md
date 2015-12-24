@@ -46,6 +46,6 @@ To run the example, follow these steps:
 2. npm i
 3. run `/ios/deviceorientation.xcodeproj` via Xcode
 
-![](https://github.com/Purii/react-native-approach-deviceorientation/blob/master/assets/portrait.png)
-
-![](https://github.com/Purii/react-native-approach-deviceorientation/blob/master/assets/landscape.png)
+| Portrait | Landscape |
+| :------------: | :---------------: |
+| ![](https://github.com/Purii/react-native-approach-deviceorientation/blob/master/assets/portrait.png) | ![](https://github.com/Purii/react-native-approach-deviceorientation/blob/master/assets/landscape.png) |
