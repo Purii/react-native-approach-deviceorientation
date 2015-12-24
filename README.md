@@ -30,7 +30,7 @@ To recognize an orientation change, we use both, `onLayout` and `Dimensions`. Be
   render() {
     return (
       <View style={styles.container} onLayout={this.handleLayoutChange}>
-      ....
+      ...
       </View>
     )
   }
