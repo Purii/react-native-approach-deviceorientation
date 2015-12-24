@@ -19,20 +19,29 @@ Each View-Component supports an event called `onLayout` (https://facebook.github
 To recognize an orientation change, we use both, `onLayout` and `Dimensions`. Because the dimensions of `window` are always the same, we are able to compare its values with those of the root View, which we get through `onLayout`. The rest is simple math. If the width of the View is wider than the width of `window`, the app is in landscape mode.
 
 ```javascript
-handleLayoutChange(event: Event) {
-  const isLandscape = event.nativeEvent.layout.width > Dimensions.get('window').width;
-  // Do whatever you want with that result
-  this.setState({
-    isLandscape
-  })
-}
+...
+  handleLayoutChange(event: Event) {
+    const isLandscape = event.nativeEvent.layout.width > Dimensions.get('window').width;
+    // Do whatever you want with the result
+    this.setState({
+      isLandscape
+    })
+  }
+  render() {
+    return (
+      <View style={styles.container} onLayout={this.handleLayoutChange}>
+      ....
+      </View>
+    )
+  }
+...
 ```
 
-There’s no need to call this comparison manually, since `onLayout` gets triggered every single time the layout changes. I would reccomend the simple add the value `isLandscape` to your state and propagate it down to its child components. Or you choose something different, like a global state or store ([Redux](https://github.com/rackt/redux),..).
+There’s no need to call this comparison manually, since `onLayout` gets triggered every single time the layout changes. I would recommend to add the value `isLandscape` to your state and propagate it down to its child components. Or you use something more complex, like a global state or store ([Redux](https://github.com/rackt/redux),..).
 
 ## Example
 To run the example, follow these steps:
 
 1. git clone https://github.com/Purii/react-native-approach-deviceorientation
 2. npm i
-3. run /ios/deviceorientation.xcodeproj via Xcode
+3. run `/ios/deviceorientation.xcodeproj` via Xcode
