@@ -25,7 +25,7 @@ class deviceorientation extends Component {
     const isLandscape = event.nativeEvent.layout.width > Dimensions.get('window').width;
     this.setState({
       isLandscape
-    })
+    });
   }
   render() {
     const {isLandscape} = this.state;
@@ -42,7 +42,7 @@ class deviceorientation extends Component {
           Cmd+D or shake for dev menu
         </Text>
         <Text style={[...{}, styles.instructions, styles.instructions__highlight]}>
-          {isLandscape ? ">Landscape<" : ">Portrait<" }
+          {isLandscape ? '>Landscape<' : '>Portrait<'}
         </Text>
       </View>
     );
