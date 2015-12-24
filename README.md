@@ -2,8 +2,8 @@
 
 React Native is an awesome technology to develop native applications using JavaScript as cross-platform language. You can read more about React Native in the [official documentation](https://facebook.github.io/react-native/), if you’re not already familiar with it.
 
-Native components could easily added by developing bridges to native Objective-C, Swift or Java code. But sometimes such a bridge isn’t really necessary. Some requirements could be met by using already existing bridges and some JavaScript logic.
-With this approach I want to show, how to detect a device orientation change easily, with already included components and their available methods.
+Native components could easily added by developing [bridges to native Objective-C, Swift or Java code](https://facebook.github.io/react-native/docs/native-components-ios.html). But sometimes such a bridge isn’t really necessary. Some requirements could be met by using the shipped bridges and some JavaScript logic.
+With this approach I want to show, how to detect a device orientation change easily, with already included components and their available methods and events.
 
 ## No third-party components
 Detect a device orientation change in react-native isn’t as complicated as you might think. All you need is already on board, no third-party components are needed. This approach works for **every platform**, which is supported by React Native, out of the box.
