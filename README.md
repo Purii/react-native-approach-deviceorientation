@@ -1,4 +1,4 @@
-# React Native: Approach to detect device orientation change without additional components
+# React Native: Approach to detect device orientation change without additional native components
 
 React Native is an awesome technology to develop native applications using JavaScript as cross-platform language. You can read more about React Native in the [official documentation](https://facebook.github.io/react-native/), if you’re not already familiar with it.
 
@@ -19,6 +19,8 @@ Each View-Component supports an event called `onLayout` (https://facebook.github
 To recognize an orientation change, we use both, `onLayout` and `Dimensions`. Because the dimensions of `window` are always the same, we are able to compare its values with those of the root View, which we get through `onLayout`. The rest is simple math. If the width of the View is wider than the width of `window`, the app is in landscape mode.
 
 ```javascript
+...
+import Dimensions from 'Dimensions';
 ...
   handleLayoutChange(event: Event) {
     const isLandscape = event.nativeEvent.layout.width > Dimensions.get('window').width;
