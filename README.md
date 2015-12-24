@@ -6,7 +6,7 @@ Native, platform specific components could easily added by developing [bridges t
 With this approach I want to show, how to detect a device orientation change easily, with already included components and their available methods and events. The big advantage here, is the support for multiple platforms without sepcific bridges.
 
 ## No third-party components
-Detect a device orientation change in react-native isn’t as complicated as you might think. All you need is already on board, no third-party components are needed. This approach works for **every platform**, which is supported by React Native, out of the box.
+Detect a device orientation change in react-native isn’t as complicated as you might think. All you need is already on board, no third-party components are needed. This works for **every platform**, which is supported by React Native, out of the box.
 
 ### Event: `onLayout`
 Each View-Component supports an event called `onLayout` (https://facebook.github.io/react-native/docs/view.html#onlayout). This event gets triggered every time the layout of the specific component gets changed. Rotate the will change at least the layout of the root View.
