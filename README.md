@@ -25,7 +25,7 @@ To recognize an orientation change, we use both, `onLayout` and `Dimensions`. Be
     // Do whatever you want with the result
     this.setState({
       isLandscape
-    })
+    });
   }
   render() {
     return (
