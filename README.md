@@ -13,7 +13,7 @@ Each View-Component supports an event called `onLayout` (https://facebook.github
 *Of course, only if mulitple layouts are enabled, like landscape and portrait.*
 
 ### Api: `Dimensions`
-[This Api](https://facebook.github.io/react-native/docs/dimensions.html#content) allows you to get the current dimensions of your app. Through this api it is possible to get the dimensions of `window`. The important part is, that the result won’t be affected by layout changes, it is just the dimension of the application’s window.
+[The Dimensons Api](https://facebook.github.io/react-native/docs/dimensions.html#content) allows you to get the current dimensions of your app. Through this api it is possible to get the dimensions of `window`. The important part is, that the result won’t be affected by layout changes, it is just the dimension of the application’s window.
 
 ## Detect device orientation change
 To recognize an orientation change, we use both, `onLayout` and `Dimensions`. Because the dimensions of `window` are always the same, we are able to compare its values with those of the root View, which we get through `onLayout`. The rest is simple math. If the width of the View is wider than the width of `window` the app is in landscape mode.
