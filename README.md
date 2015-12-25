@@ -5,6 +5,8 @@ React Native is an awesome technology to develop native applications using JavaS
 Native, platform specific components could easily added by developing [bridges to native Objective-C, Swift or Java code](https://facebook.github.io/react-native/docs/native-components-ios.html). But sometimes such a bridge isn’t really necessary. Some requirements could be met by using the shipped bridges and some JavaScript logic.
 With this approach I want to show, how to detect a device orientation change easily, with already included components and their available methods and events. The big advantage here, is the support for multiple platforms without sepcific bridges.
 
+I use the following solution for my component [react-native-adbannerview](https://github.com/Purii/react-native-adbannerview).
+
 ## No third-party components
 Detect a device orientation change in react-native isn’t as complicated as you might think. All you need is already on board, no third-party components are needed. This works for **every platform**, which is supported by React Native, out of the box.
 
