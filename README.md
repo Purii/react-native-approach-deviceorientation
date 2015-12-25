@@ -11,14 +11,14 @@ I use the following solution for my component [react-native-adbannerview](https:
 Detect a device orientation change in react-native isn’t as complicated as you might think. All you need is already on board, no third-party components are needed. This works for **every platform**, which is supported by React Native, out of the box.
 
 ### Event: `onLayout`
-Each View-Component supports an event called `onLayout` (https://facebook.github.io/react-native/docs/view.html#onlayout). This event is triggered every time the layout of the specific component changes. The root View would be a good component, to listen for orientation changes, since its layout will be always be affected.
+Each View-Component supports an event called `onLayout` (https://facebook.github.io/react-native/docs/view.html#onlayout). This event is triggered every time the layout of a specific component changes. The obvious View to listen for orientation change might be the root View, since its layout will definitly be affected by such a change.
 *Of course, only if mulitple layouts are [enabled](https://developer.apple.com/library/ios/technotes/tn2244/_index.html), like landscape and portrait.*
 
 ### Api: `Dimensions`
-[The Dimensons Api](https://facebook.github.io/react-native/docs/dimensions.html#content) allows you to get the current dimensions of your app. Through this api it is possible to get the dimensions of `window`. Important is, that the result will always be the same, no matter in which orientation the device is. It delivery just the dimension of the application’s window.
+[The Dimensons Api](https://facebook.github.io/react-native/docs/dimensions.html#content) provides you with current dimensions of your app. It is also possible to get the dimensions of `window` directly. Important is, that the result will always be the same, no matter in which orientation the device is. `Dimensions.get('window');` will always return the dimensions of the application’s window.
 
 ## Detect device orientation change
-To recognize an orientation change, we use both, `onLayout` and `Dimensions`. Because the dimensions of `window` are always the same, we are able to compare its values with those of the root View, which we get through `onLayout`. The rest is simple math. If the width of the View is wider than the width of `window`, the app is in landscape mode.
+To recognize an orientation change, we combine `onLayout` and `Dimensions`. Because the dimensions of `window` are always the same, we are able to compare its values with those of the root View, which we get through `onLayout`. The rest is simple math. Is the width of the View wider than the width of `window`, then the app is in landscape mode.
 
 ```javascript
 ...
@@ -41,7 +41,7 @@ import Dimensions from 'Dimensions';
 ...
 ```
 
-There’s no need to call this comparison manually, since `onLayout` gets triggered every single time the layout changes. I would recommend to add the value `isLandscape` to your state and propagate it down to its child components. Or you use something more complex, like a global state or store ([Redux](https://github.com/rackt/redux),..).
+I would recommend to add the value of `isLandscape` to your state and propagate it down to its child components. Or you use something more complex, like a global state or store ([Redux](https://github.com/rackt/redux),..).
 
 ## Example
 To run the example, follow these steps:
