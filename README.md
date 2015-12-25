@@ -12,7 +12,7 @@ Detect a device orientation change in react-native isn’t as complicated as you
 
 ### Event: `onLayout`
 Each View-Component supports an event called `onLayout` (https://facebook.github.io/react-native/docs/view.html#onlayout). This event is triggered every time the layout of the specific component changes. The root View would be a good component, to listen for orientation changes, since its layout will be always be affected.
-*Of course, only if mulitple layouts are enabled, like landscape and portrait.*
+*Of course, only if mulitple layouts are [enabled](https://developer.apple.com/library/ios/technotes/tn2244/_index.html), like landscape and portrait.*
 
 ### Api: `Dimensions`
 [The Dimensons Api](https://facebook.github.io/react-native/docs/dimensions.html#content) allows you to get the current dimensions of your app. Through this api it is possible to get the dimensions of `window`. Important is, that the result will always be the same, no matter in which orientation the device is. It delivery just the dimension of the application’s window.
