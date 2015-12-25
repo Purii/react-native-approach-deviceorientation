@@ -44,7 +44,7 @@ import Dimensions from 'Dimensions';
 I would recommend to add the value of `isLandscape` to your state and propagate it down to its child components. Or you use something more complex, like a global state or store ([Redux](https://github.com/rackt/redux),..).
 
 ### Disadvantages
-Because of the usage of `Dimensions`, this approach **isn't suitable for non-fullscreen applications**. The applicability really depends on your requirements.
+Because of the usage of `Dimensions`, this approach **isn't suitable for non-fullscreen applications**. The applicability really depends on the requirements. *Actually, I need to look deeper in the api. About the results, it returns in such situations.* 
 
 ## Example
 To run the example, follow these steps:
