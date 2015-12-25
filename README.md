@@ -11,7 +11,7 @@ I use the following solution for my component [react-native-adbannerview](https:
 Detect a device orientation change in react-native isn’t as complicated as you might think. All you need is already on board, no third-party components are needed. This works for **every platform**, which is supported by React Native, out of the box.
 
 ### Event: `onLayout`
-Each View-Component supports an event called `onLayout` (https://facebook.github.io/react-native/docs/view.html#onlayout). This event gets triggered every time the layout of the specific component gets changed. Rotate the will change at least the layout of the root View.
+Each View-Component supports an event called `onLayout` (https://facebook.github.io/react-native/docs/view.html#onlayout). This event is triggered every time the layout of the specific component changes. The root View would be a good component, to listen for orientation changes, since its layout will be always be affected.
 *Of course, only if mulitple layouts are enabled, like landscape and portrait.*
 
 ### Api: `Dimensions`
