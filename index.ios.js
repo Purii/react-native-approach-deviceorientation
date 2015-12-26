@@ -22,7 +22,7 @@ class deviceorientation extends Component {
     }
   }
   handleLayoutChange(event: Event) {
-    const isLandscape = event.nativeEvent.layout.width > Dimensions.get('window').width;
+    const isLandscape = event.nativeEvent.layout.width >= Dimensions.get('window').width;
     this.setState({
       isLandscape
     });

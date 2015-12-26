@@ -23,7 +23,7 @@ To recognize an orientation change, we use both, `onLayout` and `Dimensions`. Be
 import Dimensions from 'Dimensions';
 ...
   handleLayoutChange(event: Event) {
-    const isLandscape = event.nativeEvent.layout.width > Dimensions.get('window').width;
+    const isLandscape = event.nativeEvent.layout.width >= Dimensions.get('window').width;
     // Do whatever you want with the result
     this.setState({
       isLandscape
